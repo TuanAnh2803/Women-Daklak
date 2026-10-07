@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=1920, initial-scale=1.0"
+    >
+
+    <title>Màn hình cam kết trực tiếp — EAKIẾT</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+<div class="dash">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="dash-header">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                <img src="image.jpg" alt="Logo chương trình">
+            </div>
+
+            <div class="brand-text">
+
+                <div class="brand-org">HỘI LHPN TỈNH ĐẮK LẮK</div>
+
+                <h1 class="brand-title" id="campaignTitle">
+                    CHIẾN DỊCH TRUYỀN THÔNG VỀ BÌNH ĐẲNG GIỚI
+                    TRONG THỜI ĐẠI SỐ
+                </h1>
+
+                <div class="brand-meta">
+                    <span>📅 ?/?/2026</span>
+                    <span></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 3 ô ảnh chiến dịch — thả ảnh thật vào assets/header-1.jpg, header-2.jpg, header-3.jpg
+             để thay cho ô màu placeholder bên dưới -->
+        <div class="brand-photos">
+
+            <div class="photo-slot slot-1">
+                <img
+                    src="30-4.jpg"
+                    alt="Ảnh chiến dịch 1"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                >
+                <div class="photo-placeholder">
+                    <strong>ẢNH HEADER 1</strong>
+                    <span>thay file: assets/header-1.jpg</span>
+                </div>
+            </div>
+
+            <div class="photo-slot slot-2">
+                <img
+                    src="19.jpg"
+                    alt="Ảnh chiến dịch 2"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                >
+                <div class="photo-placeholder">
+                    <strong>ẢNH HEADER 2</strong>
+                    <span>thay file: assets/header-2.jpg</span>
+                </div>
+            </div>
+
+            <div class="photo-slot slot-3">
+                <img
+                    src="705.jpg"
+                    alt="Ảnh chiến dịch 3"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                >
+                <div class="photo-placeholder">
+                    <strong>ẢNH HEADER 3</strong>
+                    <span>thay file: assets/header-3.jpg</span>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="dash-main">
+
+        <aside class="panel-counter">
+
+            <div class="counter-number" id="counterNumber">0</div>
+
+            <div class="counter-label">LƯỢT CAM KẾT</div>
+
+            <div class="qr-box">
+                <div id="qrcode"></div>
+            </div>
+
+            <div class="qr-caption">Quét mã QR để cùng cam kết</div>
+
+        </aside>
+
+        <section class="panel-list">
+
+            <h2 class="list-title">🤝 Những người đã ký cam kết</h2>
+
+            <div class="signer-grid" id="signerGrid">
+
+                <div class="empty-state" id="emptyState">
+                    Đang chờ những cam kết đầu tiên...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="dash-footer">
+
+        <span>ĐƠN VỊ ĐỒNG HÀNH</span>
+
+        <img src="PCA.png" alt="PCASoft">
+
+    </footer>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

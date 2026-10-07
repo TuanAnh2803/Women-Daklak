@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Cam kết điện tử</title>
+
+    <!-- CSS RIÊNG -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="hero-header">
+
+        <!-- Avatar / Logo -->
+        <div class="avatar">
+            <img
+                src="image.jpg"
+                alt="Logo chương trình"
+            >
+        </div>
+
+        <div class="hero-title">
+            <div>Hội LHPN XÃ EAKIẾT</div>
+            <strong>CAM KẾT ĐIỆN TỬ</strong>
+        </div>
+
+    </header>
+
+
+    <!-- ================= STEPS ================= -->
+
+    <div class="steps">
+
+        <div class="step active" id="stepIndicator1">
+            <div class="step-number">1</div>
+            <div>Thông tin</div>
+        </div>
+
+        <div class="step" id="stepIndicator2">
+            <div class="step-number">2</div>
+            <div>Cam kết</div>
+        </div>
+
+        <div class="step" id="stepIndicator3">
+            <div class="step-number">3</div>
+            <div>Ký tên</div>
+        </div>
+
+    </div>
+
+
+    <!-- ================= EVENT INFO ================= -->
+
+    <div class="event-info">
+
+        <div class="event-title">
+            CHIẾN DỊCH TRUYỀN THÔNG VỀ BÌNH ĐẲNG GIỚI
+            TRONG THỜI ĐẠI SỐ
+        </div>
+
+        <div class="event-details">
+            <span>📅 27/5/2026</span>
+            <span>📍 Quảng trường 10/3, phường Buôn Ma Thuột, tỉnh Đắk Lắk</span>
+        </div>
+
+    </div>
+
+
+    <!-- ================= SCREEN 1 ================= -->
+
+    <section
+        class="screen active"
+        id="screen1"
+    >
+
+        <h2 class="title">
+            Thông tin của bạn
+        </h2>
+
+        <p class="description">
+            Vui lòng điền đầy đủ thông tin để tham gia
+            ký cam kết điện tử.
+        </p>
+
+
+        <div class="field">
+
+            <label for="fullName">
+                Họ và tên <span>*</span>
+            </label>
+
+            <input
+                type="text"
+                id="fullName"
+                placeholder="Ví dụ: Nguyễn Thị A"
+                autocomplete="name"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label for="organization">
+                Đơn vị / Chi hội
+            </label>
+
+            <input
+                type="text"
+                id="organization"
+                placeholder="Ví Dụ: Hội LHPN xã EAKIẾT"
+            >
+        <div class="hint"> Không bắt buộc — giúp ban tổ chức thống kê. </div>
+        </div>
+
+
+        <button
+            class="btn btn-primary btn-full"
+            id="nextInfoButton"
+        >
+            Tiếp tục
+        </button>
+
+    </section>
+
+
+    <!-- ================= SCREEN 2 ================= -->
+
+    <section
+        class="screen"
+        id="screen2"
+    >
+
+        <h2 class="title">
+            Nội dung cam kết
+        </h2>
+
+        <p class="description">
+            Vui lòng chọn những nội dung bạn cam kết thực hiện.
+        </p>
+
+
+        <button
+            class="select-all"
+            id="selectAllButton"
+        >
+            Chọn tất cả
+        </button>
+
+
+        <label class="commitment">
+
+            <input
+                type="checkbox"
+                class="commitmentCheck"
+                value="Sử dụng mạng xã hội văn minh, tích cực và có trách nhiệm"
+            >
+
+            <span>
+                Tôi cam kết sử dụng mạng xã hội văn minh,
+                tích cực và có trách nhiệm.
+            </span>
+
+        </label>
+
+
+        <label class="commitment">
+
+            <input
+                type="checkbox"
+                class="commitmentCheck"
+                value="Không chia sẻ thông tin sai sự thật"
+            >
+
+            <span>
+                Tôi không chia sẻ thông tin sai sự thật,
+                thông tin chưa được kiểm chứng.
+            </span>
+
+        </label>
+
+
+        <label class="commitment">
+
+            <input
+                type="checkbox"
+                class="commitmentCheck"
+                value="Bảo vệ thông tin cá nhân"
+            >
+
+            <span>
+                Tôi chủ động bảo vệ thông tin cá nhân,
+                tài khoản và dữ liệu trên không gian mạng.
+            </span>
+
+        </label>
+
+
+        <label class="commitment">
+
+            <input
+                type="checkbox"
+                class="commitmentCheck"
+                value="Không tham gia hành vi bạo lực mạng"
+            >
+
+            <span>
+                Tôi không tham gia, cổ súy hoặc tiếp tay
+                cho các hành vi bạo lực trên không gian mạng.
+            </span>
+
+        </label>
+
+
+        <label class="commitment">
+
+            <input
+                type="checkbox"
+                class="commitmentCheck"
+                value="Lan tỏa những giá trị tốt đẹp"
+            >
+
+            <span>
+                Tôi lan tỏa những thông tin và giá trị
+                tốt đẹp đến cộng đồng.
+            </span>
+
+        </label>
+
+
+        <div class="buttons">
+
+            <button
+                class="btn btn-secondary"
+                id="backToInfo"
+            >
+                Quay lại
+            </button>
+
+            <button
+                class="btn btn-primary"
+                id="nextCommitment"
+            >
+                Tiếp tục
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SCREEN 3 ================= -->
+
+    <section
+        class="screen"
+        id="screen3"
+    >
+
+        <h2 class="title">
+            Ký tên xác nhận
+        </h2>
+
+        <p class="description">
+            Vui lòng ký tên vào ô bên dưới để hoàn tất
+            cam kết điện tử.
+        </p>
+
+
+        <div class="signature-box">
+
+            <canvas id="signatureCanvas"></canvas>
+
+            <div class="signature-placeholder">
+                Ký tên tại đây
+            </div>
+
+        </div>
+
+
+        <button
+            class="clear-signature"
+            id="clearSignature"
+        >
+            Xóa chữ ký
+        </button>
+
+
+        <div class="buttons">
+
+            <button
+                class="btn btn-secondary"
+                id="backToCommitment"
+            >
+                Quay lại
+            </button>
+
+            <button
+                class="btn btn-primary"
+                id="submitButton"
+            >
+                TÔI CAM KẾT
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SUCCESS ================= -->
+
+    <section
+        class="screen"
+        id="successScreen"
+    >
+
+        <div class="success">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Cam kết thành công!
+            </h2>
+
+            <p>
+                Cảm ơn bạn đã tham gia ký cam kết.
+            </p>
+
+            <p>
+                Thông tin của bạn đã được ghi nhận.
+            </p>
+
+
+            <button
+                class="btn btn-primary btn-full"
+                id="newCommitment"
+            >
+                Ký cho người khác
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="partner-title">
+            ĐƠN VỊ ĐỒNG HÀNH
+        </div>
+
+        <div class="partner">
+
+            <img
+                src="PCA.png"
+                alt="PCASoft"
+            >
+
+            <h5>PCASoft</h5>
+
+        </div>
+
+    </footer>
+
+</div>
+
+
+<!-- JAVASCRIPT RIÊNG -->
+<script src="script.js"></script>
+
+</body>
+</html>

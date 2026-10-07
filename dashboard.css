@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg-top: #1b2050;
+    --bg-bottom: #262c6b;
+
+    --panel: rgba(255, 255, 255, .05);
+    --panel-border: rgba(217, 123, 30, .35);
+
+    --gold: #e0982f;
+    --gold-soft: #f3b65a;
+
+    --ink: #ffffff;
+    --ink-soft: #aab0c9;
+
+    --green: #3fbb5e;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: "Be Vietnam Pro", Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            160deg,
+            var(--bg-top) 0%,
+            var(--bg-bottom) 100%
+        );
+
+    color: var(--ink);
+}
+
+
+.dash {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =================================================
+   HEADER
+================================================= */
+
+.dash-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 24px;
+
+    padding: 18px 32px;
+
+    border-bottom: 2px solid var(--gold);
+}
+
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.brand-logo {
+    width: 64px;
+    height: 64px;
+
+    flex-shrink: 0;
+
+    background: #fff;
+
+    border-radius: 50%;
+
+    border: 3px solid var(--gold);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+.brand-org {
+    color: var(--gold-soft);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: .6px;
+
+    margin-bottom: 2px;
+}
+
+
+.brand-title {
+    font-size: 22px;
+    font-weight: 800;
+
+    line-height: 1.3;
+
+    max-width: 760px;
+
+    margin-bottom: 6px;
+}
+
+
+.brand-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 16px;
+
+    color: var(--ink-soft);
+
+    font-size: 13px;
+}
+
+
+.brand-photos {
+    display: flex;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+.photo-slot {
+    position: relative;
+
+    width: 150px;
+    height: 88px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .35);
+}
+
+
+.photo-slot img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.photo-placeholder {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2px;
+
+    text-align: center;
+
+    padding: 6px;
+
+    color: #fff;
+}
+
+
+.photo-placeholder strong {
+    font-size: 11.5px;
+    font-weight: 800;
+
+    letter-spacing: .3px;
+}
+
+
+.photo-placeholder span {
+    font-size: 9.5px;
+    opacity: .85;
+}
+
+
+.slot-1 .photo-placeholder { background: linear-gradient(135deg, #e0982f, #c06c1a); }
+.slot-2 .photo-placeholder { background: linear-gradient(135deg, #3a4bb0, #262a5e); }
+.slot-3 .photo-placeholder { background: linear-gradient(135deg, #2f9e85, #1f6e5c); }
+
+
+/* =================================================
+   MAIN
+================================================= */
+
+.dash-main {
+    flex: 1;
+
+    display: flex;
+
+    gap: 24px;
+
+    padding: 28px 32px;
+}
+
+
+/* ---------- counter / QR panel ---------- */
+
+.panel-counter {
+    width: 300px;
+
+    flex-shrink: 0;
+
+    background: var(--panel);
+
+    border: 1px solid var(--panel-border);
+
+    border-radius: 18px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.counter-number {
+    font-size: 72px;
+    font-weight: 800;
+
+    color: var(--gold-soft);
+
+    line-height: 1;
+
+    text-shadow: 0 0 26px rgba(224, 152, 47, .55);
+}
+
+
+.counter-label {
+    margin-top: 10px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: var(--ink-soft);
+}
+
+
+.qr-box {
+    margin-top: 26px;
+
+    background: #fff;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.qr-box img,
+.qr-box canvas {
+    display: block;
+}
+
+
+.qr-caption {
+    margin-top: 12px;
+
+    font-size: 13.5px;
+    font-weight: 600;
+
+    color: var(--ink-soft);
+}
+
+
+/* ---------- signer list panel ---------- */
+
+.panel-list {
+    flex: 1;
+
+    min-width: 0;
+
+    background: var(--panel);
+
+    border: 1px solid var(--panel-border);
+
+    border-radius: 18px;
+
+    padding: 24px 26px;
+
+    overflow-y: auto;
+}
+
+
+.list-title {
+    font-size: 19px;
+    font-weight: 800;
+
+    color: var(--gold-soft);
+
+    margin-bottom: 18px;
+}
+
+
+.signer-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+
+    gap: 12px;
+}
+
+
+.empty-state {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: var(--ink-soft);
+
+    font-size: 15px;
+}
+
+
+.signer-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding: 13px 14px;
+
+    background: rgba(255, 255, 255, .04);
+
+    border: 1px solid var(--panel-border);
+
+    border-left: 3px solid var(--gold);
+
+    border-radius: 11px;
+
+    animation: card-in .35s ease-out;
+}
+
+
+@keyframes card-in {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .signer-card {
+        animation: none;
+    }
+
+}
+
+
+.signer-check {
+    width: 22px;
+    height: 22px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 1px;
+}
+
+
+.signer-info {
+    min-width: 0;
+}
+
+
+.signer-name {
+    font-size: 14.5px;
+    font-weight: 700;
+
+    color: #fff;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.signer-status {
+    font-size: 12px;
+
+    color: var(--gold-soft);
+
+    margin-top: 1px;
+}
+
+
+.signer-org {
+    font-size: 12px;
+
+    color: var(--ink-soft);
+
+    margin-top: 2px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =================================================
+   FOOTER
+================================================= */
+
+.dash-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+
+    color: var(--gold-soft);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: .5px;
+}
+
+
+.dash-footer img {
+    height: 26px;
+
+    border-radius: 4px;
+
+    background: #fff;
+
+    padding: 2px 4px;
+}
+
+
+/* =================================================
+   RESPONSIVE
+================================================= */
+
+@media (max-width: 960px) {
+
+    .dash-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .dash-main {
+        flex-direction: column;
+    }
+
+
+    .panel-counter {
+        width: 100%;
+
+        flex-direction: row;
+
+        justify-content: space-around;
+
+        flex-wrap: wrap;
+    }
+
+}

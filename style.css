@@ -1,0 +1,835 @@
+/* =================================================
+   FONT
+   Be Vietnam Pro — a Vietnamese-native typeface,
+   so diacritics sit correctly at every weight.
+================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --ink: #262b3a;
+    --ink-soft: #767c8c;
+
+    --navy: #1c2960;
+    --navy-deep: #262a5e;
+
+    --gold: #d97b1e;
+    --gold-deep: #c06c1a;
+
+    --paper: #eef0f5;
+    --card: #ffffff;
+
+    --line: #dde1e8;
+    --line-soft: #e6e8ee;
+
+    --green: #3f9142;
+
+    --radius-lg: 20px;
+    --radius-md: 13px;
+    --radius-sm: 12px;
+
+    --shadow-card:
+        0 18px 40px -22px rgba(14, 35, 82, .28);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: "Be Vietnam Pro", Arial, Helvetica, sans-serif;
+
+    background: var(--paper);
+
+    color: var(--ink);
+
+    min-height: 100vh;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 520px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    background: var(--card);
+
+    box-shadow: var(--shadow-card);
+}
+
+
+.hint {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin-top: 7px;
+    line-height: 1.5;
+}
+
+
+/* =================================================
+   HEADER
+================================================= */
+
+.hero-header {
+    position: relative;
+
+    width: 100%;
+    height: 168px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            115deg,
+            var(--gold) 0%,
+            var(--gold) 35%,
+            var(--navy-deep) 100%
+        );
+
+    overflow: hidden;
+}
+
+
+.avatar {
+    width: 78px;
+    height: 78px;
+
+    padding: 6px;
+
+    background: #fff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, .28);
+
+    margin-bottom: 9px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+
+.hero-title {
+    text-align: center;
+
+    color: #fff;
+
+    font-size: 13.5px;
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    letter-spacing: .2px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero-title strong {
+    display: block;
+
+    font-size: 19px;
+    font-weight: 800;
+
+    margin-top: 2px;
+
+    letter-spacing: .3px;
+}
+
+
+/* =================================================
+   STEPS
+================================================= */
+
+.steps {
+    display: flex;
+
+    justify-content: space-around;
+
+    position: relative;
+
+    padding: 20px 30px 16px;
+}
+
+
+.steps::before {
+    content: "";
+
+    position: absolute;
+
+    top: 31px;
+
+    left: 19%;
+
+    right: 19%;
+
+    height: 2px;
+
+    background: var(--line);
+}
+
+
+.step {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: #9aa1b0;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.step-number {
+    width: 24px;
+    height: 24px;
+
+    margin: 0 auto 6px;
+
+    border-radius: 50%;
+
+    background: #e5e7ed;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #99a0b0;
+
+    font-weight: 700;
+    font-size: 12px;
+
+    transition: background .25s, color .25s;
+}
+
+
+.step.active {
+    color: var(--gold);
+}
+
+
+.step.active .step-number {
+    background: var(--gold);
+
+    color: #fff;
+}
+
+
+/* =================================================
+   EVENT INFO
+================================================= */
+
+.event-info {
+    margin: 17px 20px 26px;
+
+    padding: 16px 18px;
+
+    background: #eef0fb;
+
+    border-radius: var(--radius-md);
+}
+
+
+.event-title {
+    color: var(--navy-deep);
+
+    font-size: 13.5px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    margin-bottom: 9px;
+}
+
+
+.event-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    color: #6a7282;
+
+    font-size: 12.5px;
+
+    line-height: 1.5;
+}
+
+
+/* =================================================
+   CONTENT
+================================================= */
+
+.screen {
+    display: none;
+
+    padding: 4px 20px 28px;
+}
+
+
+.screen.active {
+    display: block;
+}
+
+
+.title {
+    color: var(--navy-deep);
+
+    font-size: 23px;
+    font-weight: 800;
+
+    letter-spacing: -.2px;
+
+    margin-bottom: 8px;
+}
+
+
+.description {
+    color: var(--ink-soft);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 24px;
+}
+
+
+/* =================================================
+   FORM
+================================================= */
+
+.field {
+    margin-bottom: 19px;
+}
+
+
+.field label {
+    display: block;
+
+    color: #2c3550;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+.field label span {
+    color: #c0392b;
+}
+
+
+.field input {
+    width: 100%;
+
+    height: 49px;
+
+    padding: 0 15px;
+
+    background: #fbfaf7;
+
+    border: 1.5px solid var(--line);
+
+    border-radius: var(--radius-sm);
+
+    outline: none;
+
+    font: inherit;
+    font-size: 15px;
+    color: var(--ink);
+
+    transition: border-color .2s, box-shadow .2s, background .2s;
+}
+
+
+.field input::placeholder {
+    color: #b3b8c4;
+}
+
+
+.field input:focus {
+    border-color: var(--navy);
+
+    background: #fff;
+
+    box-shadow:
+        0 0 0 4px rgba(22, 49, 107, .09);
+}
+
+
+/* =================================================
+   COMMITMENT
+================================================= */
+
+.select-all {
+    width: 100%;
+
+    height: 46px;
+
+    border: 1.5px solid var(--line);
+
+    background: #fbfaf7;
+
+    color: var(--navy);
+
+    border-radius: var(--radius-sm);
+
+    font: inherit;
+    font-weight: 700;
+    font-size: 14px;
+
+    margin-bottom: 14px;
+
+    cursor: pointer;
+
+    transition: border-color .2s, background .2s;
+}
+
+
+.select-all:hover {
+    border-color: var(--navy);
+
+    background: #f3f5fa;
+}
+
+
+.commitment {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 14px 15px;
+
+    margin-bottom: 10px;
+
+    background: #fdfcfa;
+
+    border: 1.5px solid var(--line-soft);
+
+    border-radius: var(--radius-md);
+
+    cursor: pointer;
+
+    transition: border-color .2s, background .2s, box-shadow .2s;
+}
+
+
+.commitment:hover {
+    border-color: #d8ccb4;
+}
+
+
+.commitment.selected {
+    border-color: var(--gold);
+
+    background: #fff8f0;
+
+    box-shadow: 0 4px 14px -8px rgba(217, 122, 38, .5);
+}
+
+
+.commitment input {
+    width: 20px;
+    height: 20px;
+
+    flex-shrink: 0;
+
+    accent-color: var(--gold);
+
+    margin-top: 2px;
+
+    cursor: pointer;
+
+    transition: transform .15s;
+}
+
+
+.commitment.selected input {
+    transform: scale(1.08);
+}
+
+
+.commitment span {
+    color: #464d5c;
+
+    font-size: 13.5px;
+
+    line-height: 1.55;
+}
+
+
+/* =================================================
+   BUTTON
+================================================= */
+
+.buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+
+.btn {
+    flex: 1;
+
+    min-height: 48px;
+
+    border: none;
+
+    border-radius: var(--radius-sm);
+
+    font: inherit;
+    font-size: 14.5px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: transform .12s, box-shadow .2s, background .2s;
+}
+
+
+.btn-full {
+    width: 100%;
+}
+
+
+.btn-primary {
+    background: var(--gold);
+
+    color: #fff;
+}
+
+
+.btn-primary:hover {
+    background: var(--gold-deep);
+}
+
+
+.btn-primary:active {
+    transform: scale(.98);
+}
+
+
+.btn-secondary {
+    background: #edeef2;
+
+    color: #4a5064;
+}
+
+
+.btn-secondary:hover {
+    background: #e3e5eb;
+}
+
+
+/* =================================================
+   SIGNATURE
+================================================= */
+
+.signature-box {
+    position: relative;
+
+    width: 100%;
+    height: 220px;
+
+    border: 1.5px dashed #c9cee0;
+
+    border-radius: var(--radius-md);
+
+    overflow: hidden;
+
+    background:
+        repeating-linear-gradient(
+            transparent,
+            transparent 100%
+        ),
+        #fdfdfc;
+}
+
+
+.signature-box::after {
+    content: "";
+
+    position: absolute;
+
+    left: 24px;
+    right: 24px;
+    bottom: 34px;
+
+    height: 1px;
+
+    background: #dfe2ea;
+}
+
+
+#signatureCanvas {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    touch-action: none;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.signature-placeholder {
+    position: absolute;
+
+    top: 44%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: #c1c6d2;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+.clear-signature {
+    margin-top: 10px;
+
+    border: none;
+
+    background: none;
+
+    color: var(--gold-deep);
+
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.clear-signature:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================================
+   SUCCESS
+================================================= */
+
+.success {
+    text-align: center;
+
+    padding: 50px 10px;
+}
+
+
+.success-icon {
+    width: 74px;
+    height: 74px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: #fff;
+
+    font-size: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow: 0 12px 26px -12px rgba(63, 145, 66, .6);
+
+    animation: pop-in .4s ease-out;
+}
+
+
+@keyframes pop-in {
+    from {
+        transform: scale(.6);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .success-icon {
+        animation: none;
+    }
+
+}
+
+
+.success h2 {
+    color: var(--navy-deep);
+
+    font-size: 23px;
+    font-weight: 800;
+
+    margin-bottom: 15px;
+}
+
+
+.success p {
+    color: var(--ink-soft);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 5px;
+}
+
+
+.success .btn {
+    margin-top: 26px;
+}
+
+
+/* =================================================
+   FOOTER
+================================================= */
+
+.footer {
+    border-top: 1px solid var(--line-soft);
+
+    margin-top: 10px;
+
+    padding: 18px 20px 24px;
+
+    text-align: center;
+}
+
+
+.partner-title {
+    color: var(--navy);
+
+    font-size: 11.5px;
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    margin-bottom: 11px;
+}
+
+
+.partner {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+}
+
+
+.partner img {
+    width: 74px;
+    height: 34px;
+
+    object-fit: contain;
+
+    border: 1px solid var(--line);
+
+    border-radius: 5px;
+
+    background: #fff;
+}
+
+
+.partner h5,
+.partner span {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #333a4a;
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 380px) {
+
+    .hero-header {
+        height: 154px;
+    }
+
+
+    .avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+
+    .hero-title strong {
+        font-size: 17px;
+    }
+
+
+    .title {
+        font-size: 21px;
+    }
+
+}
